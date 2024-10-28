@@ -1,0 +1,50 @@
+{
+  "name": "wormhole",
+  "packageManager": "npm@10.5.0",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev --turbo",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "engines": {
+    "node": "=20.12.2",
+    "npm": "=10.5.0"
+  },
+  "sideEffects": [
+    "*.css",
+    "*.scss"
+  ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "license": "AGPL-3.0-only",
+  "dependencies": {
+    "@aave/math-utils": "1.29.1",
+    "@balancer-labs/sdk": "1.1.5",
+    "@mui/material": "5.16.7",
+    "@uniswap/v3-sdk": "3.13.1",
+    "@wormhole-foundation/wormhole-connect": "^1.1.2",
+    "path-to-regexp": "7.1.0",
+    "xlsx": "0.18.5"
+  },
+    "devDependencies": {
+    "@typechain/ethers-v6": "0.5.1",
+    "hardhat-jest-plugin": "0.0.6",
+    "typechain": "8.3.2"
+  },
+  "overrides": {
+    "bn.js": "~5.2.1",
+    "js-sha3": "~0.8.0"
+  }
+}

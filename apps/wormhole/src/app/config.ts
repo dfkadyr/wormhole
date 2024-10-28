@@ -17,14 +17,12 @@ const config: WormholeConnectConfig = {
   ],
 
   ui: {
-    title: 'StakeWise Bridge',
-    menu: [],
     defaultInputs: {
       fromChain: 'Ethereum',
       toChain: 'Arbitrum',
     },
     showHamburgerMenu: false,
-    walletConnectProjectId: process.env.NEXT_PUBLIC_WALLET_CONNECT_ID,
+    walletConnectProjectId: '60c8253e84912956fc991fcb05481f93',
   },
 
   routes: [

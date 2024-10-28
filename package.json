@@ -1,26 +1,69 @@
 {
   "name": "wormhole",
+  "packageManager": "npm@10.5.0",
   "version": "0.1.0",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "turbo run dev",
+    "clean": "turbo run clean",
+    "dev:wormhole": "turbo run dev --filter={./apps/wormhole}",
+    "build": "turbo build",
+    "lint": "turbo lint"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "devDependencies": {
+    "@actions/core": "1.10.0",
+    "@graphql-codegen/cli": "5.0.2",
+    "@graphql-codegen/near-operation-file-preset": "3.0.0",
+    "@graphql-codegen/typescript": "4.0.6",
+    "@graphql-codegen/typescript-operations": "4.2.3",
+    "@next/bundle-analyzer": "14.2.5",
+    "@sentry/browser": "8.26.0",
+    "@sentry/nextjs": "8.26.0",
+    "@testing-library/react": "16.0.0",
+    "@turbo/gen": "2.0.12",
+    "@types/crypto-js": "4.2.2",
+    "@types/jest": "29.5.12",
+    "@types/node-fetch": "2.6.11",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "autoprefixer": "10.4.20",
+    "circular-dependency-plugin": "5.2.2",
+    "crypto-js": "4.2.0",
+    "css-class-generator": "2.0.0",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.5",
+    "eslint-plugin-import": "2.29.1",
+    "husky": "9.1.4",
+    "ipfs-http-client": "60.0.1",
+    "jest": "29.7.0",
+    "jest-environment-jsdom": "29.7.0",
+    "postcss": "8.4.41",
+    "sass": "1.77.8",
+    "sass-loader": "16.0.0",
+    "stylelint": "16.8.1",
+    "stylelint-config-rational-order": "0.1.2",
+    "stylelint-scss": "6.5.0",
+    "tailwindcss": "3.4.10",
+    "ts-jest": "29.2.4",
+    "ts-node": "10.9.1",
+    "turbo": "2.0.13",
+    "typescript": "5.4.5"
   },
   "dependencies": {
-    "@wormhole-foundation/wormhole-connect": "^1.1.2",
+    "@floating-ui/react": "0.26.22",
+    "@headlessui/react": "2.1.2",
+    "@metamask/onboarding": "1.0.1",
+    "classnames": "2.5.1",
+    "ethers": "6.13.2",
+    "ethers-5": "npm:ethers@5.0.0",
+    "focus-visible": "5.2.1",
     "next": "14.2.5",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "18.3.3",
-    "@types/react-dom": "18.3.0",
-    "eslint": "8.57.0",
-    "eslint-config-next": "14.2.5",
-    "postcss": "8.4.41",
-    "tailwindcss": "3.4.10",
-    "typescript": "5.4.5"
+  "overrides": {
+    "ethers@6": "6.13.2"
   }
 }

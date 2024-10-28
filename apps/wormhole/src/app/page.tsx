@@ -2,6 +2,7 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
 
+import { lightTheme, darkTheme } from './themes'
 import config from './config'
 
 
@@ -16,7 +17,7 @@ const Wormhole: React.FC = () => {
   })
 
   return (
-    <WormholeConnect config={config} />
+    <WormholeConnect config={config} theme={lightTheme} />
   )
 }
 
