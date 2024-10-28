@@ -30,18 +30,7 @@
   },
   "license": "AGPL-3.0-only",
   "dependencies": {
-    "@aave/math-utils": "1.29.1",
-    "@balancer-labs/sdk": "1.1.5",
-    "@mui/material": "5.16.7",
-    "@uniswap/v3-sdk": "3.13.1",
-    "@wormhole-foundation/wormhole-connect": "^1.1.2",
-    "path-to-regexp": "7.1.0",
-    "xlsx": "0.18.5"
-  },
-    "devDependencies": {
-    "@typechain/ethers-v6": "0.5.1",
-    "hardhat-jest-plugin": "0.0.6",
-    "typechain": "8.3.2"
+    "@wormhole-foundation/wormhole-connect": "1.1.2"
   },
   "overrides": {
     "bn.js": "~5.2.1",

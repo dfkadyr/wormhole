@@ -1,11 +1,12 @@
 import { Inter } from 'next/font/google'
 import type { WormholeConnectTheme } from '@wormhole-foundation/wormhole-connect'
 
-const font = Inter({ 
+
+const font = Inter({
   preload: true,
   display: 'block',
   weight: [ '400', '500', '700' ],
-  subsets: [ 'latin', 'cyrillic' ]
+  subsets: [ 'latin', 'cyrillic' ],
 })
 
 export const lightTheme: WormholeConnectTheme = {

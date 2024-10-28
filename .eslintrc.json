@@ -1,3 +1,70 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/recommended"
+  ],
+  "plugins": [
+    "import"
+  ],
+  "rules": {
+
+    // Common
+
+    "no-trailing-spaces": 1,
+    "semi": [ "error", "never" ],
+    "max-len": [ "warn", { "code": 140 } ],
+    "object-curly-spacing": [ "error", "always" ],
+    "array-bracket-spacing": [ "error", "always" ],
+    "no-multiple-empty-lines": [ "error", { "max": 2 } ],
+    "jsx-a11y/alt-text": 0,
+    "comma-dangle": [
+      "warn", {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never"
+      }
+    ],
+
+    // Special
+
+    "no-restricted-globals": [ "error", {
+      "name": "localStorage",
+      "message": "Use localStorage module from @stakewise/frontwise-modules!"
+    } ],
+
+    "no-restricted-imports": ["error", {
+      "paths": [{
+        "importNames": [ "FixedNumber" ],
+        "name": "@ethersproject/bignumber",
+        "message": "Do not use FixedNumber, it is not safe"
+      }]
+    }],
+
+    // React hooks plugin
+
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+
+    // Import plugin
+
+    "import/named": 0,
+    "import/first": 0,
+    "import/extensions": 0,
+    "import/no-unresolved": 0,
+    "import/no-dynamic-require": 0,
+    "import/prefer-default-export": 0,
+    "import/no-webpack-loader-syntax": 0,
+    "import/no-named-as-default-member": 1,
+    "import/no-extraneous-dependencies": 0,
+    "import/no-anonymous-default-export": 0,
+    "import/newline-after-import": [ "error", { "count": 2 } ]
+  },
+  "ignorePatterns": [
+    "**/*.graphql.ts"
+  ]
 }

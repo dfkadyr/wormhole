@@ -17,6 +17,7 @@ const config: WormholeConnectConfig = {
   ],
 
   ui: {
+    title: '',
     defaultInputs: {
       fromChain: 'Ethereum',
       toChain: 'Arbitrum',
